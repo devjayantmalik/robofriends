@@ -3,6 +3,7 @@ import Logo from "./components/Logo";
 import RoboList from "./components/RoboList";
 import Searchbar from "./components/Searchbar";
 import ThemeToggleButton from "./components/ThemeToggleButton";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   return (
@@ -10,7 +11,10 @@ function App() {
       <ThemeToggleButton />
       <Logo />
       <Searchbar />
-      <RoboList />
+
+      <ErrorBoundary>
+        <RoboList />
+      </ErrorBoundary>
     </main>
   );
 }
